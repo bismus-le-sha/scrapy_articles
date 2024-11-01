@@ -22,7 +22,7 @@ class HabrSpider(scrapy.Spider):
                 item['author'] = 'N/A'
 
             try:
-                item['date'] = article.find('time')['datetime']
+                item['date'] = article.find('time')['title']
             except (AttributeError, TypeError):
                 item['date'] = 'N/A'
 
